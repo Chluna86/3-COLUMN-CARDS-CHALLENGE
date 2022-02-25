@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+:root {
+    /* Primary colors*/
+    --bright-orange: hsl(31, 77%, 52%);
+    --dark: hsl(184, 100%, 22%);
+    --very-dark: hsl(179, 100%, 13%);
+    /* paragraphs */
+    --Transparent-white: hsla(0, 0%, 100%, 0.75);
+    /* background, headings, buttons */
+    --Very-light-gray: hsl(0, 0%, 95%);
+}
+/*RESET STYLES*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 15px;
+    background-color: var(--Very-light-gray);
+}
+
+/* CONTAINER'S STYLES */
+/* .container {
+    width: 65%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    height: 450px;
+    margin-top: 17vh;
+    place-items: center;
+} */
+
+.container {
+    width: 100%;
+    height: 95vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} 
+
+/* CARD'S STYLES */
+.card {
+    width: 270px;
+    height: 420px;
+    display: grid;
+    padding: 50px 50px;
+}
+
+#card1 {
+    background-color: var(--bright-orange);
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+}
+
+#card2 {
+    background-color: var(--dark);
+}
+
+#card3 {
+    background-color: var(--very-dark);
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+
+/* TEXT'S STYLES */
+.title {
+    text-transform: uppercase;
+    font-family: 'Big Shoulders Display', cursive;
+    font-size: 32px;
+    font-weight: bolder;
+    color: var(--Very-light-gray);
+}
+
+.textCard {
+    font-family: 'Lexend Deca', sans-serif;
+    color: var(--Transparent-white);
+    font-size: 14px;
+    text-align:start;
+    margin-top: 25px;
+}
+
+/* BUTTON'S STYLES */
+button {
+    margin-top: 70px;
+    border: solid var(--Transparent-white) 2.3px;
+    background: var(--Very-light-gray);
+    border-radius: 38px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 120px;
+    height: 40px;
+    font-family: 'Lexend Deca', sans-serif;
+    font-weight: bold;
+}
+
+#button1 {
+    color: var(--bright-orange);
+}
+
+#button2 {
+    color: var(--dark);
+}
+
+#button3 {
+    color: var(--very-dark);
+}
+
+#button1:active, #button2:active, #button3:active {
+    background: transparent;
+    color: white;
+}
+
+/* MEDIA QUERY */
+@media only screen and (max-width:375px) { 
+	.container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        align-items: center;
+        justify-content: center;
+        margin: 50px 0px;
+    }
+    
+    #card1 {
+        background-color: var(--bright-orange);
+        border-top-left-radius: 6px;
+        border-top-right-radius: 6px;
+        border-bottom-left-radius: 0px;
+    }
+
+    #card3 {
+        background-color: var(--very-dark);
+        border-bottom-left-radius: 6px;
+        border-bottom-right-radius: 6px;
+        border-top-right-radius: 0px;
+    }
+}
